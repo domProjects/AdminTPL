@@ -1,25 +1,31 @@
 /*
  * Custom Twitter Bootstrap
  */
-#header button {
-	border: none;
-	box-shadow: none;
-	height: $header-height;
-	min-width: $header-height;
-}
-#header .dropdown-toggle:after {
-	content: none;
-}
-#header .dropdown-menu {
-	border: none;
-	margin: 0;
+#header {
+	& button {
+		border: none;
+		box-shadow: none;
+		height: $header-height;
+		min-width: $header-height;
+	}
+
+	& .dropdown-toggle:after {
+		content: none;
+	}
+
+	& .dropdown-menu {
+		border: none;
+		margin: 0;
+	}
 }
 
-#nav-left-footer button {
-	border: none;
-	box-shadow: none;
-	height: $footer-height;
-	min-width: $footer-height;
+#nav-left-footer {
+	& button {
+		border: none;
+		box-shadow: none;
+		height: $footer-height;
+		min-width: $footer-height;
+	}
 }
 
 .breadcrumb {

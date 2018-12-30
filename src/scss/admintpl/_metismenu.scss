@@ -12,49 +12,46 @@
 	list-style: none;
 }
 
-#nav-left-item > li {
-	display: flex;
-	flex-direction: column;
+#nav-left-item {
+	& > li {
+		display: flex;
+		flex-direction: column;
 
-	position: relative;
+		position: relative;
+	}
+
+	& a {
+		position: relative;
+		display: block;
+		padding: .75rem 15px;
+		outline-width: 0;
+		transition: $transition-base;
+
+		&:hover, &:focus, &:active {
+			text-decoration: none;
+		}
+
+		// Icon Font Awesome
+		& > i, & > svg {
+			margin-right: $spacer;
+			text-align: center;
+			width: 1.25em;
+		}
+	}
+
+	& ul a {
+		padding: .75rem 15px .75rem 2rem;
+	}
+
+	& ul ul a {
+		padding: .75rem 15px .75rem 3rem;
+	}
+
+	& .arrow {
+		float: right;
+	}
 }
 
-#nav-left-item a {
-	position: relative;
-	display: block;
-	padding: .75rem 15px;
-	outline-width: 0;
-	transition: $transition-base;
-}
-
-#nav-left-item ul a {
-	padding: .75rem 15px .75rem 2rem;
-}
-
-#nav-left-item ul ul a {
-	padding: .75rem 15px .75rem 3rem;
-}
-
-#nav-left-item a:hover,
-#nav-left-item a:focus,
-#nav-left-item a:active {
-	text-decoration: none;
-}
-
-#nav-left-item .arrow {
-  float: right;
-}
 *[dir="rtl"] #nav-left-item .arrow {
-  float: left;
-}
-
-
-
-// Icon Font Awesome
-//
-#nav-left-item a > i,
-#nav-left-item a > svg {
-	margin-right: $spacer;
-	text-align: center;
-	width: 1.25em;
+	float: left;
 }

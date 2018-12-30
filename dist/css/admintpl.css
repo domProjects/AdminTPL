@@ -54,16 +54,13 @@ body {
           align-items: center;
 }
 
-#nav-left-collapse i,
-#nav-left-collapse svg {
+#nav-left-collapse i, #nav-left-collapse svg {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-
-#nav-left-collapse.is-collapsed i,
-#nav-left-collapse.is-collapsed svg {
+#nav-left-collapse.is-collapsed i, #nav-left-collapse.is-collapsed svg {
   -webkit-transform: rotate(0);
           transform: rotate(0);
 }
@@ -228,7 +225,6 @@ body {
     height: 100%;
     width: 250px;
   }
-
   #nav-left.is-collapsed {
     display: block;
   }
@@ -245,7 +241,6 @@ body {
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
   }
-
   #nav-left.is-collapsed {
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);
@@ -255,7 +250,6 @@ body {
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
   }
-
   #article.is-collapsed {
     margin-left: -250px;
   }
@@ -282,14 +276,11 @@ body {
             align-items: flex-end;
   }
 
-  #nav-left-collapse i,
-  #nav-left-collapse svg {
+  #nav-left-collapse i, #nav-left-collapse svg {
     -webkit-transform: rotate(0);
             transform: rotate(0);
   }
-
-  #nav-left-collapse.is-collapsed i,
-  #nav-left-collapse.is-collapsed svg {
+  #nav-left-collapse.is-collapsed i, #nav-left-collapse.is-collapsed svg {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
   }
@@ -304,11 +295,9 @@ body {
   height: 3.5rem;
   min-width: 3.5rem;
 }
-
 #header .dropdown-toggle:after {
   content: none;
 }
-
 #header .dropdown-menu {
   border: none;
   margin: 0;
@@ -354,7 +343,6 @@ body {
           flex-direction: column;
   position: relative;
 }
-
 #nav-left-item a {
   position: relative;
   display: block;
@@ -363,32 +351,24 @@ body {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-
+#nav-left-item a:hover, #nav-left-item a:focus, #nav-left-item a:active {
+  text-decoration: none;
+}
+#nav-left-item a > i, #nav-left-item a > svg {
+  margin-right: 1rem;
+  text-align: center;
+  width: 1.25em;
+}
 #nav-left-item ul a {
   padding: .75rem 15px .75rem 2rem;
 }
-
 #nav-left-item ul ul a {
   padding: .75rem 15px .75rem 3rem;
 }
-
-#nav-left-item a:hover,
-#nav-left-item a:focus,
-#nav-left-item a:active {
-  text-decoration: none;
-}
-
 #nav-left-item .arrow {
   float: right;
 }
 
 *[dir="rtl"] #nav-left-item .arrow {
   float: left;
-}
-
-#nav-left-item a > i,
-#nav-left-item a > svg {
-  margin-right: 1rem;
-  text-align: center;
-  width: 1.25em;
 }
