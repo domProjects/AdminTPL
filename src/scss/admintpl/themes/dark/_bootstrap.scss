@@ -1,0 +1,24 @@
+// Custom Bootstrap
+//
+
+// breadcrumb
+.breadcrumb {
+    background-color: $color-200;
+}
+.breadcrumb-item a {
+	color: $black;
+}
+.breadcrumb-item.active {
+    color: $color-900;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+	color: $color-900;
+}
+
+// dropdown
+.dropdown-menu {
+	background-color: $color-50;
+}
+.dropdown-menu * {
+	color: $white;
+}

@@ -1,0 +1,25 @@
+// Color system
+
+$color-50: #ffebee !default;
+$color-100: #ffcdd2 !default;
+$color-200: #ef9a9a !default;
+$color-300: #e57373 !default;
+$color-400: #ef5350 !default;
+$color-500: #f44336 !default;
+$color-600: #e53935 !default;
+$color-700: #d32f2f !default;
+$color-800: #c62828 !default;
+$color-900: #b71c1c !default;
+$color-a100: #ff8a80 !default;
+$color-a200: #ff5252 !default;
+$color-a400: #ff1744 !default;
+$color-a700: #d50000 !default;
+
+$theme-color: () !default;
+$theme-color: map-merge(
+	(
+		"header": $color-700,
+		"nav-footer": $color-900
+	),
+	$theme-color
+);

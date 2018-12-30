@@ -1,0 +1,5 @@
+@each $color, $value in $theme-color {
+	.btn-#{$color} {
+		@include button-variant($value, $value);
+	}
+}

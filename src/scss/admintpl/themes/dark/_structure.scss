@@ -1,0 +1,52 @@
+#header {
+	background-color: $color-800;
+	color: $white;
+}
+
+#header-title {
+	background-color: $black;
+}
+
+#main {
+	background-color: $color-700;
+}
+
+#nav-left {
+	border-right: none;
+
+	background-color: $color-800;
+	color: $white;
+}
+
+#nav-left-list {
+	border-top: $border-height solid $color-200;
+	border-bottom: $border-height solid $color-200;
+}
+
+#article {
+	border-top: none;
+}
+
+#breadcrumb {
+	background-color: $color-200;
+}
+
+#section {
+	border-top: none;
+	border-bottom: none;
+
+	color: $white;
+}
+
+#footer {
+	background-color: $color-800;
+	color: $white;
+}
+
+
+
+@media(min-width: 768px) {
+	#footer-left a {
+		color: $white;
+	}
+}

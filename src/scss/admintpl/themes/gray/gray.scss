@@ -1,0 +1,20 @@
+// Bootstrap
+@import "../../../bootstrap/functions";
+@import "../../../bootstrap/variables";
+@import "../../../bootstrap/mixins/buttons";
+@import "../../../bootstrap/mixins/gradients";
+@import "../../../bootstrap/mixins/box-shadow";
+@import "../../../bootstrap/mixins/hover";
+
+// Variables AdminTPL
+@import "../../variables";
+@import "variables";
+
+// Common Mixins AdminTPL
+@import "../../mixins/buttons";
+@import "../../mixins/links";
+
+// AdminTPL
+@import "structure";
+@import "bootstrap";
+@import "metismenu";

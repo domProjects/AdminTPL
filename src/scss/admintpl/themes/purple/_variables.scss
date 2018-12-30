@@ -1,0 +1,25 @@
+// Color system
+
+$color-50: #f3e5f5 !default;
+$color-100: #e1bee7 !default;
+$color-200: #ce93d8 !default;
+$color-300: #ba68c8 !default;
+$color-400: #ab47bc !default;
+$color-500: #9c27b0 !default;
+$color-600: #8e24aa !default;
+$color-700: #7b1fa2 !default;
+$color-800: #6a1b9a !default;
+$color-900: #4a148c !default;
+$color-a100: #ea80fc !default;
+$color-a200: #e040fb !default;
+$color-a400: #d500f9 !default;
+$color-a700: #aa00ff !default;
+
+$theme-color: () !default;
+$theme-color: map-merge(
+	(
+		"header": $color-700,
+		"nav-footer": $color-900
+	),
+	$theme-color
+);

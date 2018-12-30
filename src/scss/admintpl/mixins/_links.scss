@@ -1,0 +1,6 @@
+@mixin link-variant($background, $hover-background: darken($background, 10%)) {
+	@include gradient-bg($background);
+	@include hover-focus-active {
+		@include gradient-bg($hover-background);
+	}
+}

@@ -1,0 +1,21 @@
+// Color system
+
+$color-50: #fafafa !default;
+$color-100: #f5f5f5 !default;
+$color-200: #eeeeee !default;
+$color-300: #e0e0e0 !default;
+$color-400: #bdbdbd !default;
+$color-500: #9e9e9e !default;
+$color-600: #757575 !default;
+$color-700: #616161 !default;
+$color-800: #424242 !default;
+$color-900: #212121 !default;
+
+$theme-color: () !default;
+$theme-color: map-merge(
+	(
+		"header": $color-700,
+		"nav-footer": $color-900
+	),
+	$theme-color
+);
