@@ -220,13 +220,19 @@ body {
 
 @media (max-width: 767px) {
   #nav-left {
-    display: none;
     position: absolute;
-    height: 100%;
+    bottom: 0;
+    left: 0;
+    height: calc(100vh - 3.5rem);
     width: 250px;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
   }
   #nav-left.is-collapsed {
-    display: block;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 @media (min-width: 768px) {
