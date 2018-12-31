@@ -19,6 +19,14 @@ var ADMINTPL = {
 		/**
 		 * 
 		 */
+		$('#nav-left-list').overlayScrollbars({
+			className: 'os-theme-dark',
+			sizeAutoCapable: false
+		});
+
+		/**
+		 * 
+		 */
 		$('#nav-left-collapse').doOnce(function() { 
 			this.on('click', function(e) {
 				e.preventDefault();

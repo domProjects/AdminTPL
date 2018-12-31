@@ -13,6 +13,7 @@ You can see the demo that online at this address: https://demo.domprojects.com/a
 * Bootstrap v4.2.1 - https://github.com/twbs/bootstrap
 * metisMenu v3.0.3 - https://github.com/onokumus/metismenu
 * Moment.js v2.23.0 - https://github.com/moment/moment/
+* OverlayScrollbars v1.6.1 - https://github.com/KingSora/OverlayScrollbars
 * Font Awesome v5.6.3 - https://github.com/FortAwesome/Font-Awesome
 
 ### Extra (optional)

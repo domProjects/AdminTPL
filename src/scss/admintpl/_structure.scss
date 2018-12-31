@@ -79,6 +79,7 @@ body {
 	background-color: $black;
 
 	position: absolute;
+	z-index: 5100;
 	bottom: calc(#{$footer-height} + #{$border-height});
 	left: 0;
 	height: calc(100vh - (#{$header-height} + #{$footer-height}) - (#{$border-height} * 2));
