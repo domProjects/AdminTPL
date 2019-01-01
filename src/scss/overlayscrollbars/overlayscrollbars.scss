@@ -5,5 +5,12 @@
 // Variables OverlayScrollbars
 @import "variables";
 
+// Mixins & Placeholder
+@import "mixin";
+@import "placeholder";
+
 // OverlayScrollbars
 @import "structure";
+@import "theme-none";
+@import "theme-dark";
+@import "theme-light";

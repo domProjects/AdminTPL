@@ -1,0 +1,11 @@
+// .os-scrollbar-horizontal .os-scrollbar-handle:before
+@mixin size-os-scrollbar-horizontal-handle-before($top, $bottom) {
+	top: $top;
+	bottom: $bottom;
+}
+
+// .os-scrollbar-vertical .os-scrollbar-handle:before
+@mixin size-os-scrollbar-vertical-handle-before($right, $left) {
+	right: $right;
+	left: $left;
+}
