@@ -92,8 +92,8 @@ body {
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
   -webkit-box-flex: 1;
-      -ms-flex: auto;
-          flex: auto;
+      -ms-flex: 1;
+          flex: 1;
   overflow-x: hidden;
   overflow-y: auto;
 }

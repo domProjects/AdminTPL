@@ -20,7 +20,6 @@ var ADMINTPL = {
 		 * 
 		 */
 		$('#nav-left-list').overlayScrollbars({
-			className: 'os-theme-dark',
 			sizeAutoCapable: false
 		});
 

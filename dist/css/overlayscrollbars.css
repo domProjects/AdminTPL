@@ -1,15 +1,15 @@
 html.os-html,
 html.os-html > .os-host {
-  display: block;
-  overflow: hidden;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  display: block;
+  position: absolute !important;
+  margin: 0 !important;
   height: 100% !important;
   width: 100% !important;
-  min-width: 100% !important;
   min-height: 100% !important;
-  margin: 0 !important;
-  position: absolute !important;
+  min-width: 100% !important;
+  overflow: hidden;
 }
 
 html.os-html > .os-host > .os-padding {
@@ -27,25 +27,26 @@ body.os-dragging * {
   overflow: visible !important;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -ms-flex-line-pack: start;
-      align-content: flex-start;
+  align-content: flex-start;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  -ms-grid-row-align: flex-start;
+  align-items: flex-start;
 }
 
 .os-host-flexbox {
-  overflow: hidden !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow: hidden !important;
 }
 
 .os-host-flexbox > .os-size-auto-observer {
@@ -54,10 +55,10 @@ body.os-dragging * {
 
 .os-host-flexbox > .os-content-glue {
   -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 .os-host-flexbox > .os-size-auto-observer,
@@ -65,17 +66,18 @@ body.os-dragging * {
   min-height: 0;
   min-width: 0;
   -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
   -ms-flex-negative: 1;
-      flex-shrink: 1;
+  flex-shrink: 1;
   -ms-flex-preferred-size: auto;
-      flex-basis: auto;
+  flex-basis: auto;
 }
 
 #os-dummy-scrollbar-size {
   position: fixed;
   opacity: 0;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
   visibility: hidden;
   overflow: scroll;
   height: 500px;
@@ -98,8 +100,8 @@ body.os-dragging * {
 .os-viewport-native-scrollbars-invisible#os-dummy-scrollbar-size::-webkit-scrollbar-corner,
 .os-viewport-native-scrollbars-invisible.os-viewport::-webkit-scrollbar-corner {
   display: none !important;
-  width: 0px !important;
-  height: 0px !important;
+  height: 0 !important;
+  width: 0 !important;
   visibility: hidden !important;
   background: transparent !important;
 }
@@ -107,26 +109,26 @@ body.os-dragging * {
 .os-content-glue {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
+  width: 100%;
   max-height: 100%;
   max-width: 100%;
-  width: 100%;
   pointer-events: none;
 }
 
 .os-padding {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
-  direction: inherit;
   position: absolute;
-  overflow: visible;
-  padding: 0;
-  margin: 0;
-  left: 0;
   top: 0;
-  bottom: 0;
   right: 0;
-  width: auto !important;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
   height: auto !important;
+  width: auto !important;
+  direction: inherit;
+  overflow: visible;
   z-index: 1;
 }
 
@@ -135,62 +137,60 @@ body.os-dragging * {
 }
 
 .os-viewport {
-  direction: inherit !important;
   -webkit-box-sizing: inherit !important;
           box-sizing: inherit !important;
-  resize: none !important;
-  outline: none !important;
   position: absolute;
-  overflow: hidden;
   top: 0;
-  left: 0;
-  bottom: 0;
   right: 0;
-  padding: 0;
+  bottom: 0;
+  left: 0;
   margin: 0;
+  padding: 0;
+  direction: inherit !important;
+  outline: none !important;
+  overflow: hidden;
+  resize: none !important;
   -webkit-overflow-scrolling: touch;
 }
 
 .os-content-arrange {
   position: absolute;
-  z-index: -1;
   min-height: 1px;
   min-width: 1px;
+  z-index: -1;
   pointer-events: none;
 }
 
 .os-content {
-  direction: inherit;
   -webkit-box-sizing: border-box !important;
           box-sizing: border-box !important;
   position: relative;
   display: block;
   height: 100%;
   width: 100%;
-  height: 100%;
-  width: 100%;
+  direction: inherit;
   visibility: visible;
 }
 
 .os-content > .os-textarea {
   -webkit-box-sizing: border-box !important;
           box-sizing: border-box !important;
-  direction: inherit !important;
+  position: absolute !important;
   float: none !important;
+  top: 0 !important;
+  left: 0 !important;
   margin: 0 !important;
+  padding: 0 !important;
   max-height: none !important;
   max-width: none !important;
   border: none !important;
-  border-radius: 0px !important;
+  border-radius: 0 !important;
   background: transparent !important;
-  outline: 0px none transparent !important;
+  direction: inherit !important;
+  outline: 0 none transparent !important;
   overflow: hidden !important;
   resize: none !important;
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
   z-index: 1;
-  padding: 0px;
 }
 
 .os-host-rtl > .os-padding > .os-viewport > .os-content > .os-textarea {
@@ -203,8 +203,8 @@ body.os-dragging * {
 }
 
 .os-content > .os-textarea[wrap='off'] {
+  margin: 0 !important;
   white-space: pre !important;
-  margin: 0px !important;
 }
 
 .os-text-inherit {
@@ -245,12 +245,12 @@ body.os-dragging * {
 }
 
 .os-resize-observer-host {
-  padding: inherit;
-  border: inherit;
-  border-color: transparent;
-  border-style: solid;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  padding: inherit;
+  border: inherit;
+  border-style: solid;
+  border-color: transparent;
 }
 
 .os-resize-observer-host:after {
@@ -259,14 +259,14 @@ body.os-dragging * {
 
 .os-resize-observer-host > .os-resize-observer,
 .os-resize-observer-host:after {
-  height: 200%;
-  width: 200%;
-  padding: inherit;
-  border: inherit;
-  margin: 0;
-  display: block;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
+  display: block;
+  margin: 0;
+  padding: inherit;
+  height: 200%;
+  width: 200%;
+  border: inherit;
 }
 
 .os-resize-observer.observed,
@@ -278,20 +278,20 @@ object.os-resize-observer {
 .os-size-auto-observer {
   -webkit-box-sizing: inherit !important;
           box-sizing: inherit !important;
-  height: 100%;
-  width: inherit;
-  max-width: 1px;
   position: relative;
   float: left;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: inherit;
   max-height: 1px;
+  max-width: 1px;
   overflow: hidden;
   z-index: -1;
-  padding: 0;
-  margin: 0;
   pointer-events: none;
   -webkit-box-flex: inherit;
-      -ms-flex-positive: inherit;
-          flex-grow: inherit;
+  -ms-flex-positive: inherit;
+      flex-grow: inherit;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   -ms-flex-preferred-size: 0;
@@ -299,8 +299,8 @@ object.os-resize-observer {
 }
 
 .os-size-auto-observer > .os-resize-observer {
-  width: 1000%;
   height: 1000%;
+  width: 1000%;
   min-height: 1px;
   min-width: 1px;
 }
@@ -311,24 +311,23 @@ object.os-resize-observer {
   right: 0;
   bottom: 0;
   left: 0;
-  overflow: hidden;
-  z-index: -1;
-  opacity: 0;
-  direction: ltr !important;
   -webkit-box-flex: 0 !important;
       -ms-flex: none !important;
           flex: none !important;
+  z-index: -1;
+  opacity: 0;
+  overflow: hidden;
 }
 
 .os-resize-observer-item-final {
   position: absolute;
-  left: 0;
   top: 0;
-  -webkit-transition: none !important;
-  transition: none !important;
+  left: 0;
   -webkit-box-flex: 0 !important;
       -ms-flex: none !important;
           flex: none !important;
+  -webkit-transition: none !important;
+  transition: none !important;
 }
 
 .os-resize-observer {
@@ -338,13 +337,10 @@ object.os-resize-observer {
           animation-name: hs-resize-observer-dummy-animation;
 }
 
-/*
-CUSTOM SCROLLBARS AND CORNER CORE:
-*/
 .os-host-transition > .os-scrollbar,
 .os-host-transition > .os-scrollbar-corner {
-  -webkit-transition: opacity 0.3s, visibility 0.3s, top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
-  transition: opacity 0.3s, visibility 0.3s, top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+  -webkit-transition: opacity .2s, visibility .2s, top .2s, right .2s, bottom .2s, left .2s;
+  transition: opacity .2s, visibility .2s, top .2s, right .2s, bottom .2s, left .2s;
 }
 
 html.os-html > .os-host > .os-scrollbar {
@@ -356,6 +352,7 @@ html.os-html > .os-host > .os-scrollbar {
 .os-scrollbar-corner {
   position: absolute;
   opacity: 1;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';
   z-index: 1;
 }
 
@@ -369,19 +366,19 @@ html.os-html > .os-host > .os-scrollbar {
 }
 
 .os-scrollbar-track {
-  pointer-events: auto;
   position: relative;
   height: 100%;
   width: 100%;
   padding: 0 !important;
   border: none !important;
+  pointer-events: auto;
 }
 
 .os-scrollbar-handle {
-  pointer-events: auto;
   position: absolute;
-  width: 100%;
   height: 100%;
+  width: 100%;
+  pointer-events: auto;
 }
 
 .os-scrollbar-handle-off,
@@ -482,7 +479,7 @@ html.os-html > .os-host > .os-scrollbar {
 
 .os-host-rtl > .os-scrollbar-corner.os-scrollbar-corner-resize {
   -webkit-transform: scale(-1, 1);
-  transform: scale(-1, 1);
+          transform: scale(-1, 1);
 }
 
 .os-host-overflow {
@@ -505,10 +502,6 @@ html.os-html > .os-host > .os-scrollbar {
     z-index: -1;
   }
 }
-/*
-THEMES:
-*/
-/* NONE THEME: */
 .os-theme-none > .os-scrollbar-horizontal,
 .os-theme-none > .os-scrollbar-vertical,
 .os-theme-none > .os-scrollbar-corner {
@@ -521,17 +514,18 @@ THEMES:
   min-height: 10px;
 }
 
-/* DARK & LIGHT THEME: */
 .os-theme-dark > .os-scrollbar-horizontal,
 .os-theme-light > .os-scrollbar-horizontal {
   right: 10px;
-  height: 10px;
+  height: 8px;
+  /* height: 10px; */
 }
 
 .os-theme-dark > .os-scrollbar-vertical,
 .os-theme-light > .os-scrollbar-vertical {
   bottom: 10px;
-  width: 10px;
+  width: 8px;
+  /* width: 10px; */
 }
 
 .os-theme-dark.os-host-rtl > .os-scrollbar-horizontal,
@@ -542,8 +536,12 @@ THEMES:
 
 .os-theme-dark > .os-scrollbar-corner,
 .os-theme-light > .os-scrollbar-corner {
+  height: 8px;
+  width: 8px;
+  /*
   height: 10px;
   width: 10px;
+  */
 }
 
 .os-theme-dark > .os-scrollbar-corner,
@@ -553,7 +551,7 @@ THEMES:
 
 .os-theme-dark > .os-scrollbar,
 .os-theme-light > .os-scrollbar {
-  padding: 2px;
+  /* padding: 2px; */
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background: transparent;
@@ -581,15 +579,8 @@ THEMES:
 
 .os-theme-dark.os-host-transition > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle,
 .os-theme-light.os-host-transition > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle {
-  -webkit-transition: background-color 0.3s;
-  transition: background-color 0.3s;
-}
-
-.os-theme-dark > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle,
-.os-theme-light > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle,
-.os-theme-dark > .os-scrollbar > .os-scrollbar-track,
-.os-theme-light > .os-scrollbar > .os-scrollbar-track {
-  border-radius: 10px;
+  -webkit-transition: background-color .2s;
+  transition: background-color .2s;
 }
 
 .os-theme-dark > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle {
@@ -622,10 +613,10 @@ THEMES:
 .os-theme-light > .os-scrollbar-vertical .os-scrollbar-handle:before {
   content: '';
   position: absolute;
-  left: 0;
-  right: 0;
   top: 0;
+  right: 0;
   bottom: 0;
+  left: 0;
   display: block;
 }
 
@@ -653,5 +644,4 @@ THEMES:
   right: -6px;
   left: -2px;
 }
-
 /*# sourceMappingURL=overlayscrollbars.css.map */
