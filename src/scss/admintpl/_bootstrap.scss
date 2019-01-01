@@ -5,8 +5,13 @@
 	& button {
 		border: none;
 		box-shadow: none;
-		height: $header-height;
-		min-width: $header-height;
+		height: $header-sm-height;
+		min-width: $header-sm-height;
+
+		@media(min-width: map-get($grid-breakpoints, md)) {
+			height: $header-md-height;
+			min-width: $header-md-height;
+		}
 	}
 
 	& .dropdown-toggle:after {

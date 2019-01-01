@@ -50,17 +50,7 @@ var ADMINTPL = {
 		$('#fullscreen').doOnce(function() { 
 			if ($.fullscreen.isNativelySupported() === true) {
 				this.on('click', function() {
-
 					var res = ($.fullscreen.isFullScreen() === true ) ? $.fullscreen.exit() : $('body').fullscreen();
-/*
-					if ($.fullscreen.isFullScreen() === true ) {
-						$.fullscreen.exit()
-					} else {
-						$('body').fullscreen();
-					}
-*/
-
-
 					$(this).find('i').toggleClass('fas fa-expand fas fa-compress');
 				});
 			} else {
