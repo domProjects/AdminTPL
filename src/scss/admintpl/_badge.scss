@@ -1,20 +1,15 @@
-.header-notify {
-	display: inline-block;
-	position: relative;
-}
-
 .badge-notify {
-	background-color: $white;
-	border: 1px solid $black;
-	color: $black;
+	background-color: rgba($black, .2);
 
 	position: absolute;
-	top: -5px;
-	right: -13px;
+	top: 0;
+	right: 0;
+	left: 0;
 
-	padding: 0 3px;
+	padding: 1px 0;
 	font-size: 70%;
 	line-height: 1;
+	text-align: center;
 
 	&:after {
 		//content: attr(data-count);

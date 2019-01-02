@@ -407,21 +407,16 @@ body {
   float: left;
 }
 
-.header-notify {
-  display: inline-block;
-  position: relative;
-}
-
 .badge-notify {
-  background-color: #fff;
-  border: 1px solid #000;
-  color: #000;
+  background-color: rgba(0, 0, 0, 0.2);
   position: absolute;
-  top: -5px;
-  right: -13px;
-  padding: 0 3px;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 1px 0;
   font-size: 70%;
   line-height: 1;
+  text-align: center;
 }
 
 /*# sourceMappingURL=admintpl.css.map */
