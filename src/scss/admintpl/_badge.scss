@@ -1,0 +1,22 @@
+.header-notify {
+	display: inline-block;
+	position: relative;
+}
+
+.badge-notify {
+	background-color: $white;
+	border: 1px solid $black;
+	color: $black;
+
+	position: absolute;
+	top: -5px;
+	right: -13px;
+
+	padding: 0 3px;
+	font-size: 70%;
+	line-height: 1;
+
+	&:after {
+		//content: attr(data-count);
+	}
+}
