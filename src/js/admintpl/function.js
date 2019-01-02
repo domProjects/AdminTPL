@@ -5,6 +5,21 @@
 
 			return this;
 		},
+		displayBadge: function(options) {
+			var defaults = {
+				attribut: 'data-count'
+			};
+
+			var settings = $.extend(true, defaults, options);
+
+			return this.each(function() {
+				var number = $(this).attr(settings.attribut);
+
+				if (number < 1) {
+					$(this).remove();
+				}
+			});
+		},
 		displayDateTime: function(options) {
 			var defaults = {
 				language: 'en',

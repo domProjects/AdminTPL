@@ -3,6 +3,13 @@ var ADMINTPL = {
 		/**
 		 * 
 		 */
+		$('.badge-notify').doOnce(function() { 
+			this.displayBadge();
+		});
+
+		/**
+		 * 
+		 */
 		$('#footer-datetime').doOnce(function() { 
 			this.displayDateTime({
 				language: lang
