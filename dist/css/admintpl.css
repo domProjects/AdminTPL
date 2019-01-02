@@ -4,6 +4,7 @@ body {
 }
 
 #content {
+  background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -315,9 +316,6 @@ body {
             transform: rotate(180deg);
   }
 }
-/*
- * Custom Twitter Bootstrap
- */
 #header button {
   border: none;
   -webkit-box-shadow: none;
@@ -335,7 +333,7 @@ body {
   content: none;
 }
 #header .dropdown-menu {
-  border: none;
+  border: 1px solid #000;
   margin: 0;
 }
 

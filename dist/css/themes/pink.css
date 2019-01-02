@@ -81,7 +81,7 @@
 }
 
 #article {
-  border-top: none;
+  border-top: 1px solid #e9ecef;
 }
 
 #breadcrumb {
@@ -99,6 +99,10 @@
 }
 #footer a {
   color: #f8bbd0;
+}
+
+#header .dropdown-menu {
+  border: 1px solid #adb5bd;
 }
 
 #nav-left-item li > ul {

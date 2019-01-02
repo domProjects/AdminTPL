@@ -24,7 +24,7 @@
 }
 
 #article {
-	border-top: none;
+	border-top: $border-height solid $breadcrumb-bg;
 }
 
 #breadcrumb {

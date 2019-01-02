@@ -1,6 +1,6 @@
-/*
- * Custom Twitter Bootstrap
- */
+// Custom Bootstrap
+//
+
 #header {
 	& button {
 		border: none;
@@ -19,7 +19,7 @@
 	}
 
 	& .dropdown-menu {
-		border: none;
+		border: $border-height solid $black;
 		margin: 0;
 	}
 }

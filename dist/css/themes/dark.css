@@ -81,7 +81,7 @@
 }
 
 #article {
-  border-top: none;
+  border-top: 1px solid #666666;
 }
 
 #breadcrumb {
@@ -102,6 +102,10 @@
   color: #fff;
 }
 
+#header .dropdown-menu {
+  border: 1px solid #0d0d0d;
+}
+
 .breadcrumb {
   background-color: #666666;
 }
@@ -109,11 +113,9 @@
 .breadcrumb-item a {
   color: #000;
 }
-
 .breadcrumb-item.active {
   color: #0d0d0d;
 }
-
 .breadcrumb-item + .breadcrumb-item::before {
   color: #0d0d0d;
 }
@@ -121,7 +123,6 @@
 .dropdown-menu {
   background-color: gray;
 }
-
 .dropdown-menu * {
   color: #fff;
 }

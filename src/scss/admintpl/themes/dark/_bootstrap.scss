@@ -1,24 +1,36 @@
 // Custom Bootstrap
 //
 
+#header {
+	& .dropdown-menu {
+		border: $border-height solid $color-900;
+	}
+}
+
 // breadcrumb
 .breadcrumb {
-    background-color: $color-200;
+	background-color: $color-200;
 }
-.breadcrumb-item a {
-	color: $black;
-}
-.breadcrumb-item.active {
-    color: $color-900;
-}
-.breadcrumb-item + .breadcrumb-item::before {
-	color: $color-900;
+.breadcrumb-item {
+
+	& a {
+		color: $black;
+	}
+
+	&.active {
+		color: $color-900;
+	}
+
+	& + .breadcrumb-item::before {
+		color: $color-900;
+	}
 }
 
 // dropdown
 .dropdown-menu {
 	background-color: $color-50;
-}
-.dropdown-menu * {
-	color: $white;
+
+	& * {
+		color: $white;
+	}
 }
