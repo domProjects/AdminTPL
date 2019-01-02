@@ -65,6 +65,10 @@
   background-color: #212121;
 }
 
+#main {
+  background-color: #f8f9fa;
+}
+
 #nav-left {
   border-right: none;
   background-color: #616161;
@@ -93,12 +97,10 @@
   background-color: #616161;
   color: #fff;
 }
-
-@media (min-width: 768px) {
-  #footer-left a {
-    color: #f5f5f5;
-  }
+#footer a {
+  color: #f5f5f5;
 }
+
 #nav-left-item li > ul {
   background-color: #757575;
 }

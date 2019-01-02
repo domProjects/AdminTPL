@@ -7,6 +7,10 @@
 	background-color: $color-900;
 }
 
+#main {
+	background-color: $gray-100;
+}
+
 #nav-left {
 	border-right: none;
 
@@ -35,12 +39,8 @@
 #footer {
 	background-color: $color-700;
 	color: $white;
-}
 
-
-
-@media(min-width: 768px) {
-	#footer-left a {
+	& a {
 		color: $color-100;
 	}
 }

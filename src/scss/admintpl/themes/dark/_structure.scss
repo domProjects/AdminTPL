@@ -41,12 +41,8 @@
 #footer {
 	background-color: $color-800;
 	color: $white;
-}
 
-
-
-@media(min-width: 768px) {
-	#footer-left a {
+	& a {
 		color: $white;
 	}
 }

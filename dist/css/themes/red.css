@@ -65,6 +65,10 @@
   background-color: #b71c1c;
 }
 
+#main {
+  background-color: #f8f9fa;
+}
+
 #nav-left {
   border-right: none;
   background-color: #d32f2f;
@@ -93,12 +97,10 @@
   background-color: #d32f2f;
   color: #fff;
 }
-
-@media (min-width: 768px) {
-  #footer-left a {
-    color: #ffcdd2;
-  }
+#footer a {
+  color: #ffcdd2;
 }
+
 #nav-left-item li > ul {
   background-color: #e53935;
 }

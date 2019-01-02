@@ -98,12 +98,10 @@
   background-color: #1a1a1a;
   color: #fff;
 }
-
-@media (min-width: 768px) {
-  #footer-left a {
-    color: #fff;
-  }
+#footer a {
+  color: #fff;
 }
+
 .breadcrumb {
   background-color: #666666;
 }
