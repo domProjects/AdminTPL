@@ -1,19 +1,12 @@
 var ADMINTPL = {
-	onReady: function() {
+	onLoad: function() {
+		console.log('window load: OK');
+
 		/**
 		 * 
 		 */
 		$('.badge-notify').doOnce(function() { 
 			this.displayBadge();
-		});
-
-		/**
-		 * 
-		 */
-		$('#footer-datetime').doOnce(function() { 
-			this.displayDateTime({
-				language: lang
-			});
 		});
 
 		/**
@@ -31,6 +24,18 @@ var ADMINTPL = {
 		$('#nav-left-item').doOnce(function() { 
 			this.metisMenu();
 		});
+
+		/**
+		 * 
+		 */
+		$('#footer-datetime').doOnce(function() { 
+			this.displayDateTime({
+				language: lang
+			});
+		});
+	},
+	onReady: function() {
+		console.log('document ready: OK');
 
 		/**
 		 * 
@@ -72,12 +77,8 @@ var ADMINTPL = {
 		console.log(Intl.DateTimeFormat().resolvedOptions().timeZone);
 		console.log(screen.width + 'x' + screen.height);
 */
-	},
-	onLoad: function() {
-
-
 	}
 };
 
-$(document).ready(ADMINTPL.onReady);
 $(window).on('load', ADMINTPL.onLoad);
+$(document).ready(ADMINTPL.onReady);

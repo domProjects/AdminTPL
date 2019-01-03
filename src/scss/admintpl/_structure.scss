@@ -51,7 +51,14 @@ body {
 	justify-content: center;
 	align-items: center;
 
+	& span {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
 	@media(min-width: map-get($grid-breakpoints, md)) {
+		padding: 0 $spacer;
 		height: $header-md-height;
 	}
 }
