@@ -1,0 +1,20 @@
+{
+    "name": "AdminTPL",
+    "short_name": "AdminTPL",
+    "icons": [
+        {
+            "src": "assets/icons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/icons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "https://demo.domprojects.com/admintpl/?utm_source=homescreen",
+    "theme_color": "#000",
+    "background_color": "#000",
+    "display": "standalone"
+}

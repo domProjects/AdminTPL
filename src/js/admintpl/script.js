@@ -1,6 +1,6 @@
 var ADMINTPL = {
 	onLoad: function() {
-		console.log('window load: OK');
+		console.log('window load: true');
 
 		/**
 		 * 
@@ -38,21 +38,38 @@ var ADMINTPL = {
 		 * 
 		 */
 		var arr = [
-			'meta[name=theme-color]'
+			{
+				'type': 'meta',
+				'tag': 'name',
+				'tagName': 'theme-color',
+				'tagValue': 'content'
+			},
+			{
+				'type': 'meta',
+				'tag': 'name',
+				'tagName': 'msapplication-tilecolor',
+				'tagValue': 'content'
+			},
+			{
+				'type': 'link',
+				'tag': 'rel',
+				'tagName': 'mask-icon',
+				'tagValue': 'color'
+			}
 		];
 
 		var getMetaThemeColor = getComputedStyle(document.documentElement).getPropertyValue('--metaThemeColor');
 
-		$.each(arr, function (index, value) {
-			var selectMetaThemeColor = document.querySelector(value);
+		$.each(arr, function(index, value) {
+			var selectMetaThemeColor = document.querySelector(value['type'] + '[' + value['tag'] + '=' + value['tagName'] + ']');
 
 			if (selectMetaThemeColor !== null) {
-				selectMetaThemeColor.setAttribute('content', getMetaThemeColor);
+				selectMetaThemeColor.setAttribute(value['tagValue'], getMetaThemeColor);
 			}
 		});
 	},
 	onReady: function() {
-		console.log('document ready: OK');
+		console.log('document ready: true');
 
 		/**
 		 * 
