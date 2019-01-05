@@ -1,3 +1,7 @@
+:root {
+  --metaThemeColor: #000;
+}
+
 body {
   position: relative;
   overflow: hidden;

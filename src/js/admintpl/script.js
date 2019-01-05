@@ -33,6 +33,23 @@ var ADMINTPL = {
 				language: lang
 			});
 		});
+
+		/**
+		 * 
+		 */
+		var arr = [
+			'meta[name=theme-color]'
+		];
+
+		var getMetaThemeColor = getComputedStyle(document.documentElement).getPropertyValue('--metaThemeColor');
+
+		$.each(arr, function (index, value) {
+			var selectMetaThemeColor = document.querySelector(value);
+
+			if (selectMetaThemeColor !== null) {
+				selectMetaThemeColor.setAttribute('content', getMetaThemeColor);
+			}
+		});
 	},
 	onReady: function() {
 		console.log('document ready: OK');

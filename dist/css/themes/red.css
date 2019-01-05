@@ -56,6 +56,10 @@
           box-shadow: 0 0 0 0.2rem rgba(194, 62, 62, 0.5);
 }
 
+:root {
+  --metaThemeColor: #b71c1c;
+}
+
 #header {
   background-color: #d32f2f;
   color: #fff;
