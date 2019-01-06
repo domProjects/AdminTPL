@@ -4,6 +4,7 @@
 
 body {
 	position: relative;
+	height: 100vh;
 	overflow: hidden;
 }
 
@@ -20,6 +21,8 @@ body {
 #header {
 	height: $header-sm-height;
 	font-size: 90%;
+
+	flex: 0 1 auto;
 
 	display: flex;
 	justify-content: space-between;
@@ -82,7 +85,11 @@ body {
 
 #main {
 	display: flex;
-	flex: 1;
+	height: calc(100vh - #{$header-sm-height});
+
+	@media(min-width: map-get($grid-breakpoints, md)) {
+		height: calc(100vh - #{$header-md-height});
+	}
 }
 
 #nav-left {
