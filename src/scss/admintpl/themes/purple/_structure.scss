@@ -36,8 +36,8 @@
 }
 
 #section {
-	border-top: none;
-	border-bottom: none;
+	border-top: $border-height solid $breadcrumb-bg;
+	border-bottom: $border-height solid $color-700;
 }
 
 #footer {

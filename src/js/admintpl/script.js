@@ -12,9 +12,13 @@ var ADMINTPL = {
 		/**
 		 * 
 		 */
-		$('#nav-left-list').doOnce(function() { 
+		$('#nav-left-list, #section').doOnce(function() { 
 			this.overlayScrollbars({
-				sizeAutoCapable: false
+				sizeAutoCapable: false,
+				scrollbars: {
+					autoHide: 'leave',
+					autoHideDelay: 1000
+				}
 			});
 		});
 

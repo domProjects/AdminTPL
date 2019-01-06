@@ -36,8 +36,8 @@
 }
 
 #section {
-	border-top: none;
-	border-bottom: none;
+	border-top: $border-height solid $color-200;
+	border-bottom: $border-height solid $color-800;
 
 	color: $white;
 }

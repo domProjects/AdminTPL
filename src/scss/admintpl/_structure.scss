@@ -5,6 +5,7 @@
 body {
 	position: relative;
 	height: 100vh;
+	width: 100%;
 	overflow: hidden;
 }
 
@@ -13,20 +14,15 @@ body {
 
 	display: flex;
 	flex-direction: column;
-
-	height: 100vh;
-	overflow: hidden;
 }
 
 #header {
 	height: $header-sm-height;
 	font-size: 90%;
 
-	flex: 0 1 auto;
-
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	//align-items: center;
 
 	& i, & svg {
 		font-size: 95%;
@@ -43,15 +39,36 @@ body {
 }
 
 #header-left {
+	height: inherit;
+
 	display: flex;
+	/*justify-content: flex-start;*/
+}
+
+#nav-left-collapse {
+
+	@media(min-width: map-get($grid-breakpoints, md)) {
+		& i, & svg {
+			transform: rotate(0);
+		}
+
+		&.is-collapsed i, &.is-collapsed svg {
+			transform: rotate(180deg);
+		}
+	}
 }
 
 #header-right {
+	height: inherit;
+
 	display: flex;
+	/*justify-content: flex-end;*/
 }
 
 #header-title {
+	height: $header-sm-height;
 	width: $header-sm-height;
+
 	font-weight: $font-weight-bold;
 
 	display: flex;
@@ -67,6 +84,7 @@ body {
 	@media(min-width: map-get($grid-breakpoints, md)) {
 		padding: 0 $spacer;
 		height: $header-md-height;
+		width: $nav-left-width;
 	}
 }
 
@@ -79,21 +97,37 @@ body {
 	&.is-collapsed {
 		& i, & svg {
 			transform: rotate(0);
+
+			@media(min-width: map-get($grid-breakpoints, md)) {
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	@media(min-width: map-get($grid-breakpoints, md)) {
+		& i, & svg {
+			transform: rotate(0);
 		}
 	}
 }
 
 #main {
+	flex: 1;
+	//height: calc(100vh - (#{$header-sm-height} - #{$border-height}));
+
 	display: flex;
-	height: calc(100vh - #{$header-sm-height});
 
 	@media(min-width: map-get($grid-breakpoints, md)) {
-		height: calc(100vh - #{$header-md-height});
+		//height: calc(100vh - (#{$header-md-height} - #{$border-height}));
 	}
 }
 
 #nav-left {
+	background-color: $white;
 	border-right: $border-height solid $black;
+
+	height: calc(100vh - #{$header-md-height});
+	transition: $transition-base;
 
 	display: flex;
 	flex-direction: column;
@@ -107,7 +141,6 @@ body {
 		width: $nav-left-width;
 
 		transform: translateX(-100%);
-		transition: $transition-base;
 
 		&.is-collapsed {
 			transform: translateX(0);
@@ -115,9 +148,7 @@ body {
 	}
 
 	@media(min-width: map-get($grid-breakpoints, md)) {
-		flex: 0 0 $nav-left-width;
-
-		transition: $transition-base;
+		width: $nav-left-width;
 
 		&.is-collapsed {
 			transform: translateX(-100%);
@@ -129,14 +160,18 @@ body {
 	border-top: $border-height solid $black;
 	border-bottom: $border-height solid $black;
 
-	flex: 1;
+	height: calc(100vh - (#{$header-sm-height} + #{$footer-height} + (2 * #{$border-height})));
 
 	overflow-x: hidden;
 	overflow-y: auto;
+
+	@media(min-width: map-get($grid-breakpoints, md)) {
+		height: calc(100vh - (#{$header-md-height} + #{$footer-height} + (2 * #{$border-height})));
+	}
 }
 
 #nav-left-footer {
-	flex: 0 0 $footer-height;
+	height: $footer-height;
 
 	display: flex;
 	justify-content: center;
@@ -148,9 +183,10 @@ body {
 
 	position: absolute;
 	z-index: 5100;
-	bottom: calc(#{$footer-height} + #{$border-height});
+	top: $border-height;
+	bottom: calc(#{$footer-height} + (3 * #{$border-height}));
 	left: 0;
-	height: calc(100vh - (#{$header-sm-height} + #{$footer-height}) - (#{$border-height} * 2));
+	//height: calc(100vh - (#{$header-sm-height} + #{$footer-height}) - (2 * #{$border-height}));
 	width: $nav-left-width;
 
 	padding: $spacer;
@@ -166,26 +202,10 @@ body {
 	}
 
 	@media(min-width: map-get($grid-breakpoints, md)) {
-		height: calc(100vh - (#{$header-md-height} + #{$footer-height}) - (#{$border-height} * 2));
+		top: calc(#{$header-md-height} + #{$border-height});
+		//height: calc(100vh - (#{$header-md-height} + #{$footer-height}) - (2 * #{$border-height}));
 	}
 }
-/*
-#test-right-to-left {
-	background-color: $black;
-
-	position: fixed;
-    right: 0;
-    top: 70px;
-    width: 250px;
-    height: calc(100vh - 70px);
-    background-color: #333;
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in-out;
-}
-#test-right-to-left.is-collapsed {
-	transform: translateX(0);
-}
-*/
 
 #article {
 	border-top: $border-height solid $black;
@@ -194,11 +214,19 @@ body {
 
 	display: flex;
 	flex-direction: column;
+
+	@media(min-width: map-get($grid-breakpoints, md)) {
+		transition: $transition-base;
+
+		&.is-collapsed {
+			margin-left: $nav-left-width-negative;
+		}
+	}
 }
 
 #breadcrumb {
-	height: $breadcrumb-height;
 	padding: 0 ($grid-gutter-width / 2);
+	height: $breadcrumb-height;
 
 	display: flex;
 	align-items: center;
@@ -208,22 +236,39 @@ body {
 	border-top: $border-height solid $black;
 	border-bottom: $border-height solid $black;
 
-	flex: 1;
-
 	padding: ($grid-gutter-width / 2) 0;
+	height: calc(100vh - (#{$header-sm-height} + #{$breadcrumb-height} + #{$footer-height} + #{$border-height}));
+
 	overflow-x: hidden;
 	overflow-y: auto;
+
+	@media(min-width: map-get($grid-breakpoints, md)) {
+		height: calc(100vh - (#{$header-md-height} + #{$breadcrumb-height} + #{$footer-height} + #{$border-height}));
+	}
 }
 
 #footer {
 	height: $footer-height;
 
+	font-size: $small-font-size;
+
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	@media(min-width: map-get($grid-breakpoints, md)) {
+		padding: 0 ($grid-gutter-width / 2);
+
+		justify-content: space-between;
+	}
 }
+
 #footer-left {
 	display: none;
+
+	@media(min-width: map-get($grid-breakpoints, md)) {
+		display: inline-block;
+	}
 }
 
 #footer-datetime {
@@ -231,46 +276,7 @@ body {
 	flex-direction: column;
 	align-items: center;
 
-	font-size: $small-font-size;
-}
-
-
-
-@media(min-width: map-get($grid-breakpoints, md)) {
-	#header-title {
-		width: $nav-left-width;
-	}
-
-	#article {
-		transition: $transition-base;
-
-		&.is-collapsed {
-			margin-left: $nav-left-width-negative;
-		}
-	}
-
-	#footer {
-		padding: 0 ($grid-gutter-width / 2);
-
-		justify-content: space-between;
-	}
-	#footer-left {
-		display: inline-block;
-		font-size: $small-font-size;
-	}
-
-	#footer-datetime {
-		flex-direction: column;
+	@media(min-width: map-get($grid-breakpoints, md)) {
 		align-items: flex-end;
-	}
-
-	#nav-left-collapse {
-		& i, & svg {
-			transform: rotate(0);
-		}
-
-		&.is-collapsed i, &.is-collapsed svg {
-			transform: rotate(180deg);
-		}
 	}
 }
