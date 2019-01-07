@@ -126,6 +126,8 @@ body {
 	background-color: $white;
 	border-right: $border-height solid $black;
 
+	z-index: 9000;
+
 	height: calc(100vh - #{$header-md-height});
 	transition: $transition-base;
 
@@ -182,7 +184,7 @@ body {
 	background-color: $black;
 
 	position: absolute;
-	z-index: 5100;
+	z-index: 9100;
 	top: $border-height;
 	bottom: calc(#{$footer-height} + (3 * #{$border-height}));
 	left: 0;

@@ -132,6 +132,7 @@ body {
 #nav-left {
   background-color: #fff;
   border-right: 1px solid #000;
+  z-index: 9000;
   height: calc(100vh - 3.5rem);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -200,7 +201,7 @@ body {
 #panel-left-settings {
   background-color: #000;
   position: absolute;
-  z-index: 5100;
+  z-index: 9100;
   top: 1px;
   bottom: calc(3rem + (3 * 1px));
   left: 0;
