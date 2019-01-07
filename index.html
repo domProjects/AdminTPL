@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>AdminTPL</title>
+		<meta name="description" content="Administration Console">
 		<!-- Name of web application (only should be used if the website is used as an app) -->
 		<meta name="application-name" content="AdminTPL">
 
@@ -67,15 +68,19 @@
 						<span class="d-md-none">ATPL</span>
 					</div>
 					<div class="btn-group" role="group">
-						<button id="nav-left-collapse" class="btn btn-header" data-toggle="button" aria-pressed="false" autocomplete="off"><i class="fas fa-chevron-left"></i></button>
-						<button id="fullscreen" class="btn btn-header" data-toggle="button" aria-pressed="false" autocomplete="off"><i class="fas fa-expand"></i></button>
+						<button id="nav-left-collapse" class="btn btn-header" data-toggle="button" aria-pressed="false" autocomplete="off" aria-label="Toggle sidebar">
+							<i class="fas fa-chevron-left"></i>
+						</button>
+						<button id="fullscreen" class="btn btn-header" data-toggle="button" aria-pressed="false" autocomplete="off" aria-label="Full screen">
+							<i class="fas fa-expand"></i>
+						</button>
 					</div>
 				</div>
 				<div id="header-right">
 					<div class="btn-group" role="group">
 						<div class="dropdown">
 							<span class="badge-notify" data-count="9654">9654</span>
-							<button class="btn btn-header dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<button class="btn btn-header dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Messages">
 								<i class="fas fa-envelope"></i>
 							</button>
 							<div class="dropdown-menu dropdown-menu-right">
@@ -84,7 +89,7 @@
 						</div>
 						<div class="dropdown">
 							<span class="badge-notify" data-count="0">0</span>
-							<button class="btn btn-header dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<button class="btn btn-header dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Alerts">
 								<i class="fas fa-bell"></i>
 							</button>
 							<div class="dropdown-menu dropdown-menu-right">
@@ -93,7 +98,7 @@
 						</div>
 						<div class="dropdown">
 							<span class="badge-notify" data-count="27">27</span>
-							<button class="btn btn-header dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<button class="btn btn-header dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Taskq">
 								<i class="fas fa-tasks"></i>
 							</button>
 							<div class="dropdown-menu dropdown-menu-right">
@@ -101,7 +106,7 @@
 							</div>
 						</div>
 						<div class="dropdown">
-							<button type="button" class="btn btn-header btn-square dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<button type="button" class="btn btn-header btn-square dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="User information">
 								<i class="fas fa-user-circle"></i>
 								<span class="d-none d-md-inline-block">Administrator</span>
 							</button>
@@ -120,14 +125,14 @@
 						<ul id="nav-left-item" class="metismenu">
 							<li class="mm-active"><a href="index.html" class="mm-link"><i class="fas fa-fw fa-tachometer-alt"></i>Dashboard</a></li>
 							<li>
-								<a class="mm-link has-arrow" href="#" aria-expanded="false"><i class="fas fa-chart-pie" aria-hidden></i>Charts</a>
+								<a class="mm-link has-arrow" href="#" aria-expanded="false"><i class="fas fa-chart-pie"></i>Charts</a>
 								<ul class="mm-collapse">
 									<li><a href="#">Chart.js</a></li>
 									<li><a href="#">Hightcharts</a></li>
 								</ul>
 							</li>
 							<li>
-								<a class="mm-link has-arrow" href="#" aria-expanded="false"><i class="fas fa-edit" aria-hidden></i>Forms</a>
+								<a class="mm-link has-arrow" href="#" aria-expanded="false"><i class="fas fa-edit"></i>Forms</a>
 								<ul class="mm-collapse">
 									<li><a href="#">General</a></li>
 									<li><a href="#">Advanced</a></li>
@@ -135,7 +140,7 @@
 								</ul>
 							</li>
 							<li>
-								<a class="mm-link has-arrow" href="#" aria-expanded="false"><i class="fas fa-table" aria-hidden></i>Tables</a>
+								<a class="mm-link has-arrow" href="#" aria-expanded="false"><i class="fas fa-table"></i>Tables</a>
 								<ul class="mm-collapse">
 									<li><a href="#">Bootstrap</a></li>
 									<li><a href="#">DataTables</a></li>
@@ -173,7 +178,9 @@
 						<p>panel</p>
 					</div>
 					<div id="nav-left-footer">
-						<button id="nav-left-settings" class="btn btn-nav-footer btn-block"><i class="fas fa-cog" aria-hidden></i></button>
+						<button id="nav-left-settings" class="btn btn-nav-footer btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" aria-label="Settings">
+							<i class="fas fa-cog"></i>
+						</button>
 					</div>
 				</nav>
 				<article id="article">
