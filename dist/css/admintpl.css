@@ -48,7 +48,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /*justify-content: flex-start;*/
 }
 
 @media (min-width: 768px) {
@@ -67,7 +66,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /*justify-content: flex-end;*/
 }
 
 #header-title {
