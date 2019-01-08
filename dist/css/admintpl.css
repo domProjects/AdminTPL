@@ -145,7 +145,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-@media (max-width: 720px) {
+@media (max-width: 767.98px) {
   #nav-left {
     position: absolute;
     bottom: 0;

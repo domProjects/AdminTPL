@@ -28,7 +28,7 @@ body {
 		font-size: 95%;
 	}
 
-	@media(min-width: map-get($grid-breakpoints, md)) {
+	@include media-breakpoint-up(md) {
 		height: $header-md-height;
 		font-size: 100%;
 
@@ -47,7 +47,7 @@ body {
 
 #nav-left-collapse {
 
-	@media(min-width: map-get($grid-breakpoints, md)) {
+	@include media-breakpoint-up(md) {
 		& i, & svg {
 			transform: rotate(0);
 		}
@@ -81,7 +81,7 @@ body {
 		white-space: nowrap;
 	}
 
-	@media(min-width: map-get($grid-breakpoints, md)) {
+	@include media-breakpoint-up(md) {
 		padding: 0 $spacer;
 		height: $header-md-height;
 		width: $nav-left-width;
@@ -98,7 +98,7 @@ body {
 		& i, & svg {
 			transform: rotate(0);
 
-			@media(min-width: map-get($grid-breakpoints, md)) {
+			@include media-breakpoint-up(md) {
 				transform: rotate(180deg);
 			}
 		}
@@ -117,7 +117,7 @@ body {
 
 	display: flex;
 
-	@media(min-width: map-get($grid-breakpoints, md)) {
+	@include media-breakpoint-up(md) {
 		//height: calc(100vh - (#{$header-md-height} - #{$border-height}));
 	}
 }
@@ -135,7 +135,7 @@ body {
 	flex-direction: column;
 	justify-content: space-between;
 
-	@media(max-width: map-get($container-max-widths, md)) {
+	@include media-breakpoint-down(sm) {
 		position: absolute;
 		bottom: 0;
 		left: 0;
@@ -149,7 +149,7 @@ body {
 		}
 	}
 
-	@media(min-width: map-get($grid-breakpoints, md)) {
+	@include media-breakpoint-up(md) {
 		width: $nav-left-width;
 
 		&.is-collapsed {
@@ -167,7 +167,7 @@ body {
 	overflow-x: hidden;
 	overflow-y: auto;
 
-	@media(min-width: map-get($grid-breakpoints, md)) {
+	@include media-breakpoint-up(md) {
 		height: calc(100vh - (#{$header-md-height} + #{$footer-height} + (2 * #{$border-height})));
 	}
 }
@@ -203,7 +203,7 @@ body {
 		transform: translateX(0);
 	}
 
-	@media(min-width: map-get($grid-breakpoints, md)) {
+	@include media-breakpoint-up(md) {
 		top: calc(#{$header-md-height} + #{$border-height});
 		//height: calc(100vh - (#{$header-md-height} + #{$footer-height}) - (2 * #{$border-height}));
 	}
@@ -217,7 +217,7 @@ body {
 	display: flex;
 	flex-direction: column;
 
-	@media(min-width: map-get($grid-breakpoints, md)) {
+	@include media-breakpoint-up(md) {
 		transition: $transition-base;
 
 		&.is-collapsed {
@@ -244,7 +244,7 @@ body {
 	overflow-x: hidden;
 	overflow-y: auto;
 
-	@media(min-width: map-get($grid-breakpoints, md)) {
+	@include media-breakpoint-up(md) {
 		height: calc(100vh - (#{$header-md-height} + #{$breadcrumb-height} + #{$footer-height} + #{$border-height}));
 	}
 }
@@ -258,7 +258,7 @@ body {
 	justify-content: center;
 	align-items: center;
 
-	@media(min-width: map-get($grid-breakpoints, md)) {
+	@include media-breakpoint-up(md) {
 		padding: 0 ($grid-gutter-width / 2);
 
 		justify-content: space-between;
@@ -268,7 +268,7 @@ body {
 #footer-left {
 	display: none;
 
-	@media(min-width: map-get($grid-breakpoints, md)) {
+	@include media-breakpoint-up(md) {
 		display: inline-block;
 	}
 }
@@ -278,7 +278,7 @@ body {
 	flex-direction: column;
 	align-items: center;
 
-	@media(min-width: map-get($grid-breakpoints, md)) {
+	@include media-breakpoint-up(md) {
 		align-items: flex-end;
 	}
 }
