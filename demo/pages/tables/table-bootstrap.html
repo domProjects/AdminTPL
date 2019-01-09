@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>AdminTPL</title>
+		<meta name="description" content="Administration Console">
+		<!-- Name of web application (only should be used if the website is used as an app) -->
+		<meta name="application-name" content="AdminTPL">
+
+		<!-- Theme Color for Chrome, Firefox OS and Opera -->
+		<meta name="theme-color" content="#000000">
+
+		<!-- Theme Color for Windows Metro (Windows 8.1 and 10 / IE 11 and Edge) -->
+		<meta name="msapplication-tilecolor" content="#000000">
+
+		<!-- Google Chrome -->
+		<!-- Disable translation prompt (recommended for translate moment.js)-->
+		<meta name="google" content="notranslate">
+
+		<!-- Google Android -->
+		<!-- Add to home screen -->
+		<meta name="mobile-web-app-capable" content="yes">
+
+		<!-- Apple iOS -->
+		<!-- Enable standalone (full-screen) mode -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<!-- Status bar appearance (has no effect unless standalone mode is enabled) -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<!-- Launch Icon Title -->
+		<meta name="apple-mobile-web-app-title" content="AdminTPL">
+
+		<!-- Links to a JSON file that specifies "installation" credentials for the web applications -->
+		<link rel="manifest" href="../../manifest.json">
+
+		<!-- Icon -->
+		<!-- Apple Touch Icon -->
+		<link rel="apple-touch-icon" sizes="180x180" href="../../assets/icons/apple-touch-icon.png">
+		<!-- Favicons -->
+		<!-- For IE 10 and below -->
+		<!-- Place favicon.ico in the root directory - no tag necessary -->
+		<link rel="icon" type="image/png" sizes="32x32" href="../../assets/icons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="../../assets/icons/favicon-16x16.png">
+		<!-- Safari Pinned Tab Icon -->
+		<link rel="mask-icon" href="../../assets/icons/safari-pinned-tab.svg" color="#000000">
+
+		<!-- Twitter Bootstrap -->
+		<link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="../../assets/css/fontawesome.min.css">
+		<link rel="stylesheet" href="../../assets/css/fontawesome-solid.min.css">
+		<!-- metisMenu -->
+		<link rel="stylesheet" href="../../assets/css/metismenu.min.css">
+		<!-- OverlayScrollbars -->
+		<link rel="stylesheet" href="../../assets/css/overlayscrollbars.min.css">
+		<!-- AdminTPL core -->
+		<link rel="stylesheet" href="../../assets/css/admintpl.min.css">
+		<link rel="stylesheet" href="../../assets/css/themes/blue.min.css">
+		<!-- AdminTPL just for demo elements - delete for production -->
+		<link rel="stylesheet" href="../../assets/demo.css">
+	</head>
+	<body>
+		<div id="content">
+			<header id="header">
+				<div id="header-left">
+					<div id="header-title">
+						<span class="d-none d-md-block">AdminTPL</span>
+						<span class="d-md-none">ATPL</span>
+					</div>
+					<div class="btn-group" role="group">
+						<button id="nav-left-collapse" class="btn btn-header" data-toggle="button" aria-pressed="false" autocomplete="off" aria-label="Toggle sidebar">
+							<i class="fas fa-chevron-left"></i>
+						</button>
+						<button id="fullscreen" class="btn btn-header" data-toggle="button" aria-pressed="false" autocomplete="off" aria-label="Full screen">
+							<i class="fas fa-expand"></i>
+						</button>
+					</div>
+				</div>
+				<div id="header-right">
+					<div class="btn-group" role="group">
+						<div class="dropdown">
+							<span class="badge-notify" data-count="9654">9654</span>
+							<button class="btn btn-header dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Messages">
+								<i class="fas fa-envelope"></i>
+							</button>
+							<div class="dropdown-menu dropdown-menu-right">
+								<h6 class="dropdown-header">empty</h6>
+							</div>
+						</div>
+						<div class="dropdown">
+							<span class="badge-notify" data-count="0">0</span>
+							<button class="btn btn-header dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Alerts">
+								<i class="fas fa-bell"></i>
+							</button>
+							<div class="dropdown-menu dropdown-menu-right">
+								<h6 class="dropdown-header">empty</h6>
+							</div>
+						</div>
+						<div class="dropdown">
+							<span class="badge-notify" data-count="27">27</span>
+							<button class="btn btn-header dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Taskq">
+								<i class="fas fa-tasks"></i>
+							</button>
+							<div class="dropdown-menu dropdown-menu-right">
+								<h6 class="dropdown-header">empty</h6>
+							</div>
+						</div>
+						<div class="dropdown">
+							<button type="button" class="btn btn-header btn-square dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="User information">
+								<i class="fas fa-user-circle"></i>
+								<span class="d-none d-md-inline-block">Administrator</span>
+							</button>
+							<div class="dropdown-menu dropdown-menu-right">
+								<a class="dropdown-item" href="#">Profil</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">Logout</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<main id="main">
+				<nav id="nav-left">
+					<div id="nav-left-list">
+						<ul id="nav-left-item" class="metismenu">
+							<li><a href="../../index.html" class="mm-link"><i class="fas fa-fw fa-tachometer-alt"></i>Dashboard</a></li>
+							<li>
+								<a class="mm-link has-arrow" href="#" aria-expanded="false"><i class="fas fa-chart-pie"></i>Charts</a>
+								<ul class="mm-collapse">
+									<li><a href="#">Chart.js</a></li>
+									<li><a href="#">Hightcharts</a></li>
+								</ul>
+							</li>
+							<li>
+								<a class="mm-link has-arrow" href="#" aria-expanded="false"><i class="fas fa-edit"></i>Forms</a>
+								<ul class="mm-collapse">
+									<li><a href="#">General</a></li>
+									<li><a href="#">Advanced</a></li>
+									<li><a href="#">Editors</a></li>
+								</ul>
+							</li>
+							<li class="mm-active">
+								<a class="mm-link has-arrow" href="#" aria-expanded="false"><i class="fas fa-table"></i>Tables</a>
+								<ul class="mm-collapse">
+									<li><a href="table-bootstrap.html">Bootstrap</a></li>
+									<li><a href="#">DataTables</a></li>
+								</ul>
+							</li>
+							<li>
+								<a class="mm-link has-arrow" href="#" aria-expanded="false">Menu 1</a>
+								<ul class="mm-collapse">
+									<li><a href="#">item 1.1</a></li>
+									<li><a href="#">item 1.2</a></li>
+									<li>
+										<a class="mm-link has-arrow" href="#" aria-expanded="false">Menu 1.3</a>
+										<ul class="mm-collapse">
+											<li><a href="#">item 1.3.1</a></li>
+											<li><a href="#">item 1.3.2</a></li>
+											<li><a href="#">item 1.3.3</a></li>
+											<li><a href="#">item 1.3.4</a></li>
+										</ul>
+									</li>
+									<li><a href="#">item 1.4</a></li>
+									<li>
+										<a class="mm-link has-arrow" href="#" aria-expanded="false">Menu 1.5</a>
+										<ul class="mm-collapse">
+											<li><a href="#">item 1.5.1</a></li>
+											<li><a href="#">item 1.5.2</a></li>
+											<li><a href="#">item 1.5.3</a></li>
+											<li><a href="#">item 1.5.4</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div id="panel-left-settings">
+						<p>panel</p>
+					</div>
+					<div id="nav-left-footer">
+						<button id="nav-left-settings" class="btn btn-nav-footer btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" aria-label="Settings">
+							<i class="fas fa-cog"></i>
+						</button>
+					</div>
+				</nav>
+				<article id="article">
+					<div id="breadcrumb">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item"><a href="../../index.html">Dashboard</a></li>
+								<li class="breadcrumb-item">Tables</li>
+								<li class="breadcrumb-item active" aria-current="page">Bootstrap</li>
+							</ol>
+						</nav>
+					</div>
+					<section id="section">
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-md-12">
+
+
+								</div>
+							</div>
+						</div>
+					</section>
+					<footer id="footer">
+						<div id="footer-left">
+							Copyright&copy; 2019 AdminTPL by <a href="https://domprojects.com" target="_blank" rel="noopener noreferrer">domProjects</a>. All rights reserved.
+						</div>
+						<div id="footer-right">
+							<div id="footer-datetime"></div>
+						</div>
+					</footer>
+				</article>
+			</main>
+		</div>
+		<script>
+			// Init language
+			var lang = 'en';
+
+			// Init service worker
+			if ('serviceWorker' in navigator) {
+				navigator.serviceWorker.register('../../service-worker.js').then(function(reg) {
+					console.log('service worker: true');
+				}).catch(function(err) {
+					console.log('service worker: false >> ', err)
+				});
+			}
+
+			if (window.navigator.standalone === true) {
+				console.log('display-mode: standalone');
+			} else {
+				console.log('display-mode: not standalone');
+			}
+		</script>
+		<!-- jQuery -->
+		<script src="../../assets/js/jquery.min.js"></script>
+		<!-- Twitter Bootstrap -->
+		<script src="../../assets/js/bootstrap.bundle.min.js"></script>
+		<!-- metisMenu -->
+		<script src="../../assets/js/metismenu.min.js"></script>
+		<!-- OverlayScrollbars -->
+		<script src="../../assets/js/overlayscrollbars.min.js"></script>
+		<!-- Moment -->
+		<!--
+		USE THIS
+		<script src="../../assets/js/moment/moment-with-locales.min.js"></script>
+		OR
+		<script src="../../assets/js/moment/moment.min.js"></script>
+		<script src="../../assets/js/moment/locale/locales.min.js"></script>
+		OR
+		<script src="../../assets/js/moment/moment.min.js"></script>
+		<script src="../../assets/js/moment/locale/fr.js"></script>
+		-->
+		<script src="../../assets/js/moment/moment.min.js"></script>
+		<!-- FullScreen -->
+		<script src="../../assets/js/fullscreen.min.js"></script>
+		<!-- AdminTPL core -->
+		<script src="../../assets/js/admintpl.min.js"></script>
+		<!-- AdminTPL just for demo elements -->
+		<script src="../../assets/demo.js"></script>
+		<noscript>
+			<!-- No JS alternative -->
+		</noscript>
+	</body>
+</html>
