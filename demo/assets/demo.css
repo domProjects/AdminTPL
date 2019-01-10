@@ -1,3 +1,7 @@
 section p {
 	text-align: justify;
 }
+
+.demo-table {
+	margin-bottom: 0;
+}

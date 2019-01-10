@@ -53,6 +53,10 @@
 		<link rel="stylesheet" href="../../assets/css/metismenu.min.css">
 		<!-- OverlayScrollbars -->
 		<link rel="stylesheet" href="../../assets/css/overlayscrollbars.min.css">
+
+		<!-- DataTables -->
+		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css">
+
 		<!-- AdminTPL core -->
 		<link rel="stylesheet" href="../../assets/css/admintpl.min.css">
 		<link rel="stylesheet" href="../../assets/css/themes/blue.min.css">
@@ -189,173 +193,50 @@
 							<ol class="breadcrumb">
 								<li class="breadcrumb-item"><a href="../../index.html">Dashboard</a></li>
 								<li class="breadcrumb-item">Tables</li>
-								<li class="breadcrumb-item active" aria-current="page">Bootstrap</li>
+								<li class="breadcrumb-item active" aria-current="page">Datatables</li>
 							</ol>
 						</nav>
 					</div>
 					<section id="section">
 						<div class="container-fluid">
-
-							<div class="row mb-3">
-								<div class="col-md-12">
-
-									<div class="card">
-										<h5 class="card-header">Basic</h5>
-										<div class="card-body">
-											<div class="row">
-												<div class="col-md-6">
-													<h5>Version Light</h5>
-													<table class="table demo-table">
-														<thead>
-															<tr>
-																<th scope="col">#</th>
-																<th scope="col">First</th>
-																<th scope="col">Last</th>
-																<th scope="col">Handle</th>
-															</tr>
-														</thead>
-														<tbody>
-															<tr>
-																<th scope="row">1</th>
-																<td>Mark</td>
-																<td>Otto</td>
-																<td>@mdo</td>
-															</tr>
-															<tr>
-																<th scope="row">2</th>
-																<td>Jacob</td>
-																<td>Thornton</td>
-																<td>@fat</td>
-															</tr>
-															<tr>
-																<th scope="row">3</th>
-																<td>Larry</td>
-																<td>the Bird</td>
-																<td>@twitter</td>
-															</tr>
-														</tbody>
-													</table>
-												</div>
-												<div class="col-md-6">
-													<h5>Version Dark</h5>
-													<table class="table table-dark demo-table">
-														<thead>
-															<tr>
-																<th scope="col">#</th>
-																<th scope="col">First</th>
-																<th scope="col">Last</th>
-																<th scope="col">Handle</th>
-															</tr>
-														</thead>
-														<tbody>
-															<tr>
-																<th scope="row">1</th>
-																<td>Mark</td>
-																<td>Otto</td>
-																<td>@mdo</td>
-															</tr>
-															<tr>
-																<th scope="row">2</th>
-																<td>Jacob</td>
-																<td>Thornton</td>
-																<td>@fat</td>
-															</tr>
-															<tr>
-																<th scope="row">3</th>
-																<td>Larry</td>
-																<td>the Bird</td>
-																<td>@twitter</td>
-															</tr>
-														</tbody>
-													</table>
-												</div>
-											</div>
-										</div>
-									</div>
-
-								</div>
-							</div>
-
 							<div class="row">
 								<div class="col-md-12">
 
-									<div class="card">
-										<h5 class="card-header">Table head options</h5>
-										<div class="card-body">
-											<div class="row">
-												<div class="col-md-6">
-													<h5>Version Light</h5>
-													<table class="table demo-table">
-														<thead class="thead-light">
-															<tr>
-																<th scope="col">#</th>
-																<th scope="col">First</th>
-																<th scope="col">Last</th>
-																<th scope="col">Handle</th>
-															</tr>
-														</thead>
-														<tbody>
-															<tr>
-																<th scope="row">1</th>
-																<td>Mark</td>
-																<td>Otto</td>
-																<td>@mdo</td>
-															</tr>
-															<tr>
-																<th scope="row">2</th>
-																<td>Jacob</td>
-																<td>Thornton</td>
-																<td>@fat</td>
-															</tr>
-															<tr>
-																<th scope="row">3</th>
-																<td>Larry</td>
-																<td>the Bird</td>
-																<td>@twitter</td>
-															</tr>
-														</tbody>
-													</table>
-												</div>
-												<div class="col-md-6">
-													<h5>Version Dark</h5>
-													<table class="table demo-table">
-														<thead class="thead-dark">
-															<tr>
-																<th scope="col">#</th>
-																<th scope="col">First</th>
-																<th scope="col">Last</th>
-																<th scope="col">Handle</th>
-															</tr>
-														</thead>
-														<tbody>
-															<tr>
-																<th scope="row">1</th>
-																<td>Mark</td>
-																<td>Otto</td>
-																<td>@mdo</td>
-															</tr>
-															<tr>
-																<th scope="row">2</th>
-																<td>Jacob</td>
-																<td>Thornton</td>
-																<td>@fat</td>
-															</tr>
-															<tr>
-																<th scope="row">3</th>
-																<td>Larry</td>
-																<td>the Bird</td>
-																<td>@twitter</td>
-															</tr>
-														</tbody>
-													</table>
-												</div>
-											</div>
-										</div>
-									</div>
+									<h3>Basic</h3>
+
+									<table id="demo-datatables" class="table">
+										<thead>
+											<tr>
+												<th scope="col">#</th>
+												<th scope="col">First</th>
+												<th scope="col">Last</th>
+												<th scope="col">Handle</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row">1</th>
+												<td>Mark</td>
+												<td>Otto</td>
+												<td>@mdo</td>
+											</tr>
+											<tr>
+												<th scope="row">2</th>
+												<td>Jacob</td>
+												<td>Thornton</td>
+												<td>@fat</td>
+											</tr>
+											<tr>
+												<th scope="row">3</th>
+												<td>Larry</td>
+												<td>the Bird</td>
+												<td>@twitter</td>
+											</tr>
+										</tbody>
+									</table>
 
 								</div>
 							</div>
-
 						</div>
 					</section>
 					<footer id="footer">
@@ -410,6 +291,11 @@
 		<script src="../../assets/js/moment/moment.min.js"></script>
 		<!-- FullScreen -->
 		<script src="../../assets/js/fullscreen.min.js"></script>
+
+		<!-- DataTables -->
+		<script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+		<script src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
+
 		<!-- AdminTPL core -->
 		<script src="../../assets/js/admintpl.min.js"></script>
 		<!-- AdminTPL just for demo elements -->
