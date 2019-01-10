@@ -1,0 +1,28 @@
+{
+	"name": "AdminTPL",
+	"description": "Administration console theme built with the Bootstrap framework",
+	"version": "0.1.0",
+	"version_short": "0.1",
+	"keywords": [
+		"template",
+		"theme",
+		"mobile-first",
+		"responsive",
+		"backend",
+		"admin-dashboard",
+		"sass"
+	],
+	"homepage": "https://domprojects.com/",
+	"author": "Emmanuel CAMPAIT",
+	"contributors": [
+		"domProjects"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/domProjects/AdminTPL.git"
+	},
+	"bugs": {
+		"url": "https://github.com/domProjects/AdminTPL/issues"
+	},
+	"license": "MIT"
+}
