@@ -8,7 +8,7 @@
 		height: $header-sm-height;
 		min-width: $header-sm-height;
 
-		@media(min-width: map-get($grid-breakpoints, md)) {
+		@include media-breakpoint-up(md) {
 			height: $header-md-height;
 			min-width: $header-md-height;
 		}
