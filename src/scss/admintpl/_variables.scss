@@ -1,14 +1,28 @@
+// Header
 //
-$header-sm-height:  3rem !default;
-$header-md-height:  3.5rem !default;
-//
-$footer-height:     3rem !default;
-//
-$breadcrumb-height: 3rem !default;
-//
-$border-height: 1px !default;
+$header-sm-height:       3rem !default;        // 48px
+$header-md-height:       3.5rem !default;      // 56px
 
-// Options nav left
-$nav-left-width:          250px !default;
-$nav-left-width-negative: -250px !default;
-$nav-left-link-height:    3rem !default;
+// Footer
+//
+$footer-height:           3rem !default;       // 48px
+
+// Breadcrumb
+//
+$breadcrumb-height:       3rem !default;       // 48px
+
+// Card
+//
+// Card >> Action
+$card-action-height:      3.125rem !default;   // 50px
+$card-info-height:        5.625rem !default;   // 90px
+
+//
+$border-height:           1px !default;        // 16px
+
+// Nav left
+//
+// Nav left >> Options
+$nav-left-width:          15.625rem !default;  // 250px
+$nav-left-width-negative: -15.625rem !default; // -250px
+$nav-left-link-height:    3rem !default;       // 48px

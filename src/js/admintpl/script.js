@@ -12,7 +12,7 @@ var ADMINTPL = {
 		/**
 		 * 
 		 */
-		$('#nav-left-list, #section').doOnce(function() { 
+		$('#nav-left-list').doOnce(function() { 
 			this.overlayScrollbars({
 				sizeAutoCapable: false,
 				scrollbars: {

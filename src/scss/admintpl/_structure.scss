@@ -128,7 +128,6 @@ body {
 
 	z-index: 9000;
 
-	height: calc(100vh - #{$header-md-height});
 	transition: $transition-base;
 
 	display: flex;
@@ -139,6 +138,7 @@ body {
 		position: absolute;
 		bottom: 0;
 		left: 0;
+
 		height: calc(100vh - #{$header-sm-height});
 		width: $nav-left-width;
 
@@ -150,6 +150,7 @@ body {
 	}
 
 	@include media-breakpoint-up(md) {
+		height: calc(100vh - #{$header-md-height});
 		width: $nav-left-width;
 
 		&.is-collapsed {
@@ -163,6 +164,7 @@ body {
 	border-bottom: $border-height solid $black;
 
 	height: calc(100vh - (#{$header-sm-height} + #{$footer-height} + (2 * #{$border-height})));
+	width: 100%;
 
 	overflow-x: hidden;
 	overflow-y: auto;

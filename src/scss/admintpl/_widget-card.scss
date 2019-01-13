@@ -1,0 +1,114 @@
+// Widget :: Card
+
+// Card >> Action
+//
+.card-action {
+	border: $border-height solid $black;
+
+	margin-bottom: $spacer;
+
+	& .card-header {
+		background-color: $white;
+		border-bottom: $border-height solid $black;
+
+		padding: 0;
+		height: $card-action-height;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	& .card-header-title {
+		padding-left: $spacer;
+	}
+
+	& .card-header-action {
+		padding-right: calc(#{$spacer} / 2);
+
+		& .btn {
+			padding: 0 calc(#{$spacer} / 2);
+			height: $card-action-height;
+
+			&:focus {
+				box-shadow: none;
+			}
+		}
+
+		& .dropdown-toggle {
+			&:after {
+				content: none;
+			}
+		}
+
+		& .dropdown-menu {
+			border: $border-height solid $black;
+			margin: 0;
+			padding: 0;
+		}
+
+		& .dropdown-header {
+			padding: .75rem 1.5rem;
+		}
+
+		& .dropdown-item {
+			padding: .5rem 1.5rem;
+		}
+
+		& .dropdown-divider {
+			margin: 0;
+		}
+	}
+}
+
+// Card >> Info
+//
+.card-info {
+	border: $border-height solid $black;
+
+	margin-bottom: $spacer;
+
+	& .card-body {
+		padding: 0;
+
+		display: flex;
+		align-items: center;
+	}
+
+	& .card-icon {
+		border-right: $border-height solid $black;
+
+		flex: 0 1 $card-info-height;
+
+		height: $card-info-height;
+		font-size: 250%;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	& .card-content {
+		flex: 1;
+
+		padding-right: $spacer;
+		padding-left: $spacer;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-end;
+	}
+
+	& .card-indicator {
+		font-size: 180%;
+		font-weight: 700;
+		line-height: 1;
+
+		margin-bottom: .6rem;
+	}
+
+	& .card-text {
+		line-height: 1;
+	}
+}

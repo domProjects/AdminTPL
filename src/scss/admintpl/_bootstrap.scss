@@ -2,7 +2,7 @@
 //
 
 #header {
-	& button {
+	& .btn {
 		border: none;
 		box-shadow: none;
 		height: $header-sm-height;
@@ -23,11 +23,24 @@
 	& .dropdown-menu {
 		border: $border-height solid $black;
 		margin: 0;
+		padding: 0;
+	}
+
+	& .dropdown-header {
+		padding: .75rem 1.5rem;
+	}
+
+	& .dropdown-item {
+		padding: .5rem 1.5rem;
+	}
+
+	& .dropdown-divider {
+		margin: 0;
 	}
 }
 
 #nav-left-footer {
-	& button {
+	& .btn {
 		border: none;
 		box-shadow: none;
 		height: $footer-height;
