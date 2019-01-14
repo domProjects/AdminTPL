@@ -12,19 +12,6 @@ var ADMINTPL = {
 		/**
 		 * 
 		 */
-		$('#nav-left-list').doOnce(function() { 
-			this.overlayScrollbars({
-				sizeAutoCapable: false,
-				scrollbars: {
-					autoHide: 'leave',
-					autoHideDelay: 1000
-				}
-			});
-		});
-
-		/**
-		 * 
-		 */
 		$('#nav-left-item').doOnce(function() { 
 			this.metisMenu();
 		});
