@@ -89,13 +89,13 @@
 }
 
 #breadcrumb {
+  border-top: 1px solid #666666;
+  border-bottom: 1px solid #666666;
   background-color: #666666;
 }
 
 #section {
-  border-top: 1px solid #666666;
-  border-bottom: 1px solid #1a1a1a;
-  color: #fff;
+  border-bottom: 1px solid #262626;
 }
 
 #footer {

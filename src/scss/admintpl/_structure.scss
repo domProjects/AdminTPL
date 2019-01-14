@@ -3,68 +3,48 @@
 }
 
 body {
-	position: relative;
 	height: 100vh;
 	width: 100%;
 	overflow: hidden;
 }
 
+//
+// content
+//
 #content {
 	background-color: $white;
 
 	display: flex;
 	flex-direction: column;
+
+	height: 100%;
 }
 
-#header {
-	height: $header-sm-height;
-	font-size: 90%;
 
+//
+// content > header
+//
+#header {
 	display: flex;
 	justify-content: space-between;
-	//align-items: center;
 
-	& i, & svg {
-		font-size: 95%;
+	@include media-breakpoint-down(sm) {
+		height: $header-sm-height;
 	}
 
 	@include media-breakpoint-up(md) {
 		height: $header-md-height;
-		font-size: 100%;
-
-		& i, & svg {
-			font-size: 100%;
-		}
 	}
 }
 
+// content > header > header-left
 #header-left {
 	height: inherit;
 
 	display: flex;
-	//justify-content: flex-start;
 }
 
-#nav-left-collapse {
-
-	@include media-breakpoint-up(md) {
-		& i, & svg {
-			transform: rotate(0);
-		}
-
-		&.is-collapsed i, &.is-collapsed svg {
-			transform: rotate(180deg);
-		}
-	}
-}
-
-#header-right {
-	height: inherit;
-
-	display: flex;
-	//justify-content: flex-end;
-}
-
+// content > header > header-left > header-title
 #header-title {
 	height: $header-sm-height;
 	width: $header-sm-height;
@@ -88,58 +68,75 @@ body {
 	}
 }
 
+// content > header > header-left > nav-left-collapse
 #nav-left-collapse {
-	& i, & svg {
-		transform: rotate(180deg);
+	& i,
+	& svg {
+		transform: rotate(-180deg);
 		transition: $transition-base;
 	}
 
 	&.is-collapsed {
-		& i, & svg {
+		& i,
+		& svg {
 			transform: rotate(0);
+		}
+	}
 
-			@include media-breakpoint-up(md) {
-				transform: rotate(180deg);
+	@include media-breakpoint-up(md) {
+		& i,
+		& svg {
+			transform: rotate(0);
+		}
+
+		&.is-collapsed {
+			& i,
+			& svg {
+				transform: rotate(-180deg);
 			}
 		}
 	}
-
-	@media(min-width: map-get($grid-breakpoints, md)) {
-		& i, & svg {
-			transform: rotate(0);
-		}
-	}
 }
 
+// content > header > header-right
+#header-right {
+
+}
+
+
+//
+// content > main
+//
 #main {
 	flex: 1;
-	//height: calc(100vh - (#{$header-sm-height} - #{$border-height}));
 
 	display: flex;
-
-	@include media-breakpoint-up(md) {
-		//height: calc(100vh - (#{$header-md-height} - #{$border-height}));
-	}
 }
 
+
+//
+// content > main > nav-left
+//
 #nav-left {
 	background-color: $white;
 	border-right: $border-height solid $black;
 
 	z-index: 9000;
 
-	transition: $transition-base;
+	flex: 0 1 $nav-left-width;
 
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 
+	transition: $transition-base;
+
 	@include media-breakpoint-down(sm) {
 		position: absolute;
+		top: $header-sm-height;
 		bottom: 0;
 		left: 0;
 
-		height: calc(100vh - #{$header-sm-height});
 		width: $nav-left-width;
 
 		transform: translateX(-100%);
@@ -150,8 +147,7 @@ body {
 	}
 
 	@include media-breakpoint-up(md) {
-		height: calc(100vh - #{$header-md-height});
-		width: $nav-left-width;
+		position: relative;
 
 		&.is-collapsed {
 			transform: translateX(-100%);
@@ -159,38 +155,28 @@ body {
 	}
 }
 
+// content > main > nav-left > nav-left-list
 #nav-left-list {
 	border-top: $border-height solid $black;
 	border-bottom: $border-height solid $black;
 
-	height: calc(100vh - (#{$header-sm-height} + #{$footer-height} + (2 * #{$border-height})));
-	width: 100%;
+	flex: 1;
 
 	overflow-x: hidden;
 	overflow-y: auto;
-
-	@include media-breakpoint-up(md) {
-		height: calc(100vh - (#{$header-md-height} + #{$footer-height} + (2 * #{$border-height})));
-	}
 }
 
-#nav-left-footer {
-	height: $footer-height;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
+// content > main > nav-left > panel-left-settings
 #panel-left-settings {
 	background-color: $black;
 
-	position: absolute;
 	z-index: 9100;
+
+	position: absolute;
 	top: $border-height;
-	bottom: calc(#{$footer-height} + (3 * #{$border-height}));
+	bottom: calc(#{$footer-height} + #{$border-height});
 	left: 0;
-	//height: calc(100vh - (#{$header-sm-height} + #{$footer-height}) - (2 * #{$border-height}));
+
 	width: $nav-left-width;
 
 	padding: $spacer;
@@ -206,14 +192,24 @@ body {
 	}
 
 	@include media-breakpoint-up(md) {
-		top: calc(#{$header-md-height} + #{$border-height});
-		//height: calc(100vh - (#{$header-md-height} + #{$footer-height}) - (2 * #{$border-height}));
+
 	}
 }
 
-#article {
-	border-top: $border-height solid $black;
+// content > main > nav-left > nav-left-footer
+#nav-left-footer {
+	height: $footer-height;
 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+//
+// content > main > article
+//
+#article {
 	flex: 1;
 
 	display: flex;
@@ -228,7 +224,14 @@ body {
 	}
 }
 
+
+//
+// content > main > article > breadcrumb
+//
 #breadcrumb {
+	border-top: $border-height solid $black;
+	border-bottom: $border-height solid $black;
+
 	padding: 0 ($grid-gutter-width / 2);
 	height: $breadcrumb-height;
 
@@ -236,25 +239,29 @@ body {
 	align-items: center;
 }
 
+
+//
+// content > main > article > section
+//
 #section {
-	border-top: $border-height solid $black;
 	border-bottom: $border-height solid $black;
 
+	flex: 1;
+
 	padding: ($grid-gutter-width / 2) 0;
-	height: calc(100vh - (#{$header-sm-height} + #{$breadcrumb-height} + #{$footer-height} + #{$border-height}));
 
 	overflow-x: hidden;
 	overflow-y: auto;
-
-	@include media-breakpoint-up(md) {
-		height: calc(100vh - (#{$header-md-height} + #{$breadcrumb-height} + #{$footer-height} + #{$border-height}));
-	}
 }
 
-#footer {
-	height: $footer-height;
 
+//
+// content > main > article > footer
+//
+#footer {
 	font-size: $small-font-size;
+
+	height: $footer-height;
 
 	display: flex;
 	justify-content: center;
@@ -267,6 +274,7 @@ body {
 	}
 }
 
+// content > main > article > footer > footer-left
 #footer-left {
 	display: none;
 
@@ -275,6 +283,7 @@ body {
 	}
 }
 
+// content > main > article > footer > footer-datetime
 #footer-datetime {
 	display: flex;
 	flex-direction: column;

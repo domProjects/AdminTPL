@@ -32,14 +32,14 @@
 }
 
 #breadcrumb {
+	border-top: $border-height solid $color-200;
+	border-bottom: $border-height solid $color-200;
+
 	background-color: $color-200;
 }
 
 #section {
-	border-top: $border-height solid $color-200;
-	border-bottom: $border-height solid $color-800;
-
-	color: $white;
+	border-bottom: $border-height solid $color-700;
 }
 
 #footer {

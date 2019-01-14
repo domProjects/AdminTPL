@@ -28,16 +28,18 @@
 }
 
 #article {
-	border-top: $border-height solid $breadcrumb-bg;
+
 }
 
 #breadcrumb {
+	border-top: $border-height solid $breadcrumb-bg;
+	border-bottom: $border-height solid $breadcrumb-bg;
+
 	background-color: $breadcrumb-bg;
 }
 
 #section {
-	border-top: $border-height solid $breadcrumb-bg;
-	border-bottom: $border-height solid $color-700;
+	border-bottom: $border-height solid $gray-100;
 }
 
 #footer {
