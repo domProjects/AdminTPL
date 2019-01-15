@@ -74,24 +74,18 @@ body {
 	& svg {
 		transform: rotate(-180deg);
 		transition: $transition-base;
+
+		@include media-breakpoint-up(md) {
+			transform: rotate(0);
+		}
 	}
 
 	&.is-collapsed {
 		& i,
 		& svg {
 			transform: rotate(0);
-		}
-	}
 
-	@include media-breakpoint-up(md) {
-		& i,
-		& svg {
-			transform: rotate(0);
-		}
-
-		&.is-collapsed {
-			& i,
-			& svg {
+			@include media-breakpoint-up(md) {
 				transform: rotate(-180deg);
 			}
 		}

@@ -79,15 +79,17 @@ body {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-#nav-left-collapse.is-collapsed i, #nav-left-collapse.is-collapsed svg {
-  -webkit-transform: rotate(0);
-          transform: rotate(0);
-}
 @media (min-width: 768px) {
   #nav-left-collapse i, #nav-left-collapse svg {
     -webkit-transform: rotate(0);
             transform: rotate(0);
   }
+}
+#nav-left-collapse.is-collapsed i, #nav-left-collapse.is-collapsed svg {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+@media (min-width: 768px) {
   #nav-left-collapse.is-collapsed i, #nav-left-collapse.is-collapsed svg {
     -webkit-transform: rotate(-180deg);
             transform: rotate(-180deg);
