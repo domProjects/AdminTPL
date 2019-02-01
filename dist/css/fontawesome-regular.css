@@ -2,6 +2,7 @@
   font-family: 'Font Awesome 5 Free';
   font-style: normal;
   font-weight: 400;
+  font-display: auto;
   src: url("../fonts/fontawesome/fa-regular-400.eot");
   src: url("../fonts/fontawesome/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome/fa-regular-400.woff2") format("woff2"), url("../fonts/fontawesome/fa-regular-400.woff") format("woff"), url("../fonts/fontawesome/fa-regular-400.ttf") format("truetype"), url("../fonts/fontawesome/fa-regular-400.svg#fontawesome") format("svg");
 }
