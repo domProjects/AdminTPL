@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAEA,UAWC;EAVC,WAAW,EAAE,qBAAqB;EAClC,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,GAAG;EAChB,YAAY,ECDgB,IAAI;EDEhC,GAAG,EAAE,4CAAwC;EAC7C,GAAG,EAAE,sVAI6D;;AAGpE;IACK;EACH,WAAW,EAAE,qBAAqB;EAClC,WAAW,EAAE,GAAG",
+"mappings": "AAAA;;;GAGG;AAGH,UAWC;EAVC,WAAW,EAAE,qBAAqB;EAClC,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,GAAG;EAChB,YAAY,ECLgB,IAAI;EDMhC,GAAG,EAAE,4CAAwC;EAC7C,GAAG,EAAE,sVAI6D;;AAGpE;IACK;EACH,WAAW,EAAE,qBAAqB;EAClC,WAAW,EAAE,GAAG",
 "sources": ["../../src/scss/fontawesome/fontawesome-solid.scss","../../src/scss/fontawesome/_variables.scss"],
 "names": [],
 "file": "fontawesome-solid.css"

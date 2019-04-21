@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAEA,UAWC;EAVC,WAAW,EAAE,uBAAuB;EACpC,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,MAAM;EACnB,YAAY,ECDgB,IAAI;EDEhC,GAAG,EAAE,6CAAyC;EAC9C,GAAG,EAAE,2VAI8D;;AAGrE,IAAK;EACH,WAAW,EAAE,uBAAuB",
+"mappings": "AAAA;;;GAGG;AAGH,UAWC;EAVC,WAAW,EAAE,uBAAuB;EACpC,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,MAAM;EACnB,YAAY,ECLgB,IAAI;EDMhC,GAAG,EAAE,6CAAyC;EAC9C,GAAG,EAAE,2VAI8D;;AAGrE,IAAK;EACH,WAAW,EAAE,uBAAuB",
 "sources": ["../../src/scss/fontawesome/fontawesome-brands.scss","../../src/scss/fontawesome/_variables.scss"],
 "names": [],
 "file": "fontawesome-brands.css"
