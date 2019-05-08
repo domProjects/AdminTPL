@@ -94,14 +94,6 @@ var ADMINTPL = {
 				this.remove();
 			}
 		});
-/*
-		console.log(navigator.language);
-		console.log(navigator.languages);
-		console.log(navigator.onLine);
-		console.log(navigator.cookieEnabled);
-		console.log(Intl.DateTimeFormat().resolvedOptions().timeZone);
-		console.log(screen.width + 'x' + screen.height);
-*/
 	}
 };
 
