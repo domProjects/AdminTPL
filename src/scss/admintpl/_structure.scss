@@ -121,7 +121,9 @@ body {
 
 	z-index: 9000;
 
-	flex: 0 1 $nav-left-width;
+	//flex: 0 1 $nav-left-width;
+
+	min-width: $nav-left-width;
 
 	display: flex;
 	flex-direction: column;
@@ -213,6 +215,8 @@ body {
 	@include media-breakpoint-up(md) {
 		transition: $transition-base;
 
+		width: calc(100vw - #{$nav-left-width});
+
 		&.is-collapsed {
 			margin-left: $nav-left-width-negative;
 		}
@@ -228,7 +232,8 @@ body {
 	border-bottom: $border-height solid $black;
 
 	padding: 0 ($grid-gutter-width / 2);
-	height: $breadcrumb-height;
+
+	flex: 0 1 $breadcrumb-height;
 
 	display: flex;
 	align-items: center;
@@ -242,8 +247,11 @@ body {
 	border-bottom: $border-height solid $black;
 
 	flex: 1;
-
+	
 	padding: ($grid-gutter-width / 2) 0;
+
+	display: flex;
+	flex-direction: column;
 
 	overflow-x: hidden;
 	overflow-y: auto;
@@ -256,7 +264,7 @@ body {
 #footer {
 	font-size: $small-font-size;
 
-	height: $footer-height;
+	flex: 0 1 $footer-height;
 
 	display: flex;
 	justify-content: center;
