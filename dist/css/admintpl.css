@@ -388,8 +388,6 @@ body {
 }
 #nav-left-item a > i, #nav-left-item a > svg {
   margin-right: 1rem;
-  text-align: center;
-  width: 1.25em;
 }
 #nav-left-item ul a {
   padding: .75rem 15px .75rem 2rem;
