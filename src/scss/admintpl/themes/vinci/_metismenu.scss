@@ -1,0 +1,29 @@
+#nav-left-item {
+	& li > ul {
+		background-color: $color-600;
+	}
+
+	& li ul li > ul { /* for test */
+		background-color: $color-500;
+	}
+
+	& .has-arrow::after {
+		border-color: $white;
+	}
+
+	& a {
+		color: $white;
+	}
+
+	& li.mm-active > .mm-link {
+		@include gradient-bg(darken($color-900, 10%));
+	}
+
+	& .mm-link {
+		@include link-variant($color-900);
+	}
+
+	& li > ul a {
+		@include link-variant($color-600);
+	}
+}

@@ -1,0 +1,8 @@
+// Custom Bootstrap
+//
+
+#header {
+	& .dropdown-menu {
+		border: $border-height solid $gray-500;
+	}
+}
