@@ -6,3 +6,7 @@
 		border: $border-height solid $gray-500;
 	}
 }
+
+.btn-primary {
+	@include button-variant($color-base, $color-base);
+}

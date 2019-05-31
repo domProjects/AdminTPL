@@ -12,7 +12,7 @@
 }
 
 #main {
-	background-color: lighten($color-secondary, 60%);
+	background-color: var(--light);
 }
 
 #nav-left {
