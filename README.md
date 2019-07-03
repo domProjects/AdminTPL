@@ -14,7 +14,7 @@ You can see the demo that online at this address: https://demo.domprojects.com/a
 * metisMenu v3.0.3 - https://github.com/onokumus/metismenu
 * Moment.js v2.23.0 - https://github.com/moment/moment/
 * jQuery Fullscreen v0.6.0 - https://github.com/private-face/jquery.fullscreen
-* Font Awesome v5.6.3 - https://github.com/FortAwesome/Font-Awesome
+* Font Awesome Free v5.9.3 - https://github.com/FortAwesome/Font-Awesome
 
 ### Extra (optional)
 * Chart.js v2.7.3 - https://github.com/chartjs/Chart.js
