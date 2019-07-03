@@ -1,2 +1,2 @@
-// @koala-prepend "function.js"
-// @koala-prepend "script.js"
+// @koala-prepend "work/function.js"
+// @koala-prepend "work/script.js"
