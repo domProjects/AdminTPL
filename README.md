@@ -9,10 +9,10 @@ You can see the demo that online at this address: https://demo.domprojects.com/a
 
 ## Elements
 ### Base (core)
-* jQuery v3.3.1 - https://github.com/jquery/jquery
-* Bootstrap v4.2.1 - https://github.com/twbs/bootstrap
-* metisMenu v3.0.3 - https://github.com/onokumus/metismenu
-* Moment.js v2.23.0 - https://github.com/moment/moment/
+* jQuery v3.4.1 - https://github.com/jquery/jquery
+* Bootstrap v4.3.1 - https://github.com/twbs/bootstrap
+* metisMenu v3.0.4 - https://github.com/onokumus/metismenu
+* Moment.js v2.24.0 - https://github.com/moment/moment/
 * jQuery Fullscreen v0.6.0 - https://github.com/private-face/jquery.fullscreen
 * Font Awesome Free v5.9.3 - https://github.com/FortAwesome/Font-Awesome
 
